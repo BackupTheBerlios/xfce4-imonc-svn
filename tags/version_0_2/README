@@ -1,0 +1,48 @@
+2005/06/22
+
+Fli4l Imond Client XFce4 panel plugin
+=====================================
+
+
+1 -	Description
+	-----------
+The imonc plugin display the status of a fli4l router.
+
+The code of this plugin has been written starting from the Xfce4 sample-plugin example (www.xfce.org), then looking at both diskperf (Roger Seguin - roger_seguin@msn.com & Benedikt Meurer - benedikt.meurer@unix-ag.uni-siegen.de) and netload (Bernhard Walle - bernhard.walle@gmx.de) XFce4 goodies.
+The lowlevel imond communications has been written starting from the program 'gtk-imonc' (Stefan Strigler - steve@zeank.in-berlin.de)
+
+
+!!!!! Important !!!!!
+At the moment there is only an useful implementation for the isdn part of the router.
+Because I do not own a DSL connection the DSL part won't be implemented till ... I don't know, ask the Telekom.
+
+
+2 -	Installation
+	------------
+Do the usual stuff:
+        - tar xvzf
+        - configure --prefix=<XFce4InstallationDir>	(e.g. /usr)
+        - make
+        - make install  (as root)
+	
+You should then end up with:
+        libimonc.a   libimonc.la  libimonc.so
+installed in <XFce4InstallationDir>/lib/xfce4/panel-plugins/
+
+
+3 -	Port
+	----
+Currently, the imonc plugin is only tested to run on the following systems:
+Gentoo Linux with Xfce 4.2.2 (P4, Athlon XP, AMD 64 in 64 bit mode) and kernel 2.6.11, glibc 2.3.4 and gcc 3.4.3.
+The Fli4l router version is 2.0.8 with protocol version 10.
+Because this is my first linux C project, so I don't know if the above versions are really interresting or required and maybe there are other requirements that I don't know of at the moment of this writing.
+
+
+4 -	Bugs
+	----
+If you find a bug (on Linux), please send me a bug description, the result of "uname -a" as well as the fli4l router/protocol version.
+
+
+Enjoy!
+J. Busse
+jb@dataline-gmbh.de
